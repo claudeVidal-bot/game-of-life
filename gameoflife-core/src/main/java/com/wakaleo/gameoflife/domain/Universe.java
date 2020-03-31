@@ -29,6 +29,10 @@ public class Universe {
     public Universe(final String initialGridContents) {
         currentGridContent = new Grid(initialGridContents);
     }
+	
+	   public void dummy(){
+        currentGridContent.toString();
+    }
 
 	// Returns the input string, functions as the Universe class' print
     public static String seededWith(final String gridContents) {
