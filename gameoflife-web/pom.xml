@@ -68,7 +68,8 @@
 						</goals>
 					</execution>
 				</executions>
-	
+		</plugin>
+			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.2.5.v20141112</version>
