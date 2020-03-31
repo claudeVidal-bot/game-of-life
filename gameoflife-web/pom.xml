@@ -96,6 +96,7 @@
 							<daemon>true</daemon>
 						</configuration>
 					</execution>
+					
 					<execution>
 						<id>stop-jetty</id>
 						<phase>post-integration-test</phase>
@@ -104,9 +105,43 @@
 						</goals>
 					</execution>
 				</executions>
+				
 
 
 	</plugin>
+	
+<plugin>
+<groupId>org.lazerycode.jmeter</groupId>
+<artifactId>jmeter-maven-plugin</artifactId>
+<version>2.9.0</version>
+<executions>
+<execution>
+<id>configuration</id>
+<goals>
+<goal>configure</goal>
+</goals>
+</execution>
+<execution>
+<id>jmeter-tests</id>
+<goals>
+<goal>jmeter</goal>
+</goals>
+</execution>
+<execution>
+<id>jmeter-check-results</id>
+<goals>
+<goal>results</goal>
+</goals>
+</execution>
+</executions>
+<configuration>
+<testFilesIncluded>
+<jMeterTestFile>gameoflife-100-users.jmx</jmeterTestFile>
+</testFilesIncluded>
+</configuration>
+</plugin>
+
+
 		</plugins>
 	</build>
 	
